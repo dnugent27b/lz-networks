@@ -13,5 +13,5 @@ variable "enable_flow_logs" {
 variable "s3_vpc_flow_logs_bucket_arn" {
   description = "S3 bucket arn to store VPC flow logs"
   type        = string
-  default     = "arn:aws:s3:::abrigo1-vpc-flow-logs-us-east-1"
+  default     = "arn:aws:s3:::abrigo1-logs-us-east-1"
 }

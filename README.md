@@ -81,7 +81,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_enable_flow_logs"></a> [enable\_flow\_logs](#input\_enable\_flow\_logs) | true if VPC flow logs should be created | `bool` | `true` | no |
 | <a name="input_enable_ngw"></a> [enable\_ngw](#input\_enable\_ngw) | true if create NAT gateway | `bool` | `false` | no |
-| <a name="input_s3_vpc_flow_logs_bucket_arn"></a> [s3\_vpc\_flow\_logs\_bucket\_arn](#input\_s3\_vpc\_flow\_logs\_bucket\_arn) | S3 bucket arn to store VPC flow logs | `string` | `"arn:aws:s3:::abrigo1-vpc-flow-logs-us-east-1"` | no |
+| <a name="input_s3_vpc_flow_logs_bucket_arn"></a> [s3\_vpc\_flow\_logs\_bucket\_arn](#input\_s3\_vpc\_flow\_logs\_bucket\_arn) | S3 bucket arn to store VPC flow logs | `string` | `"arn:aws:s3:::abrigo1-logs-us-east-1"` | no |
 
 ## Outputs
 
