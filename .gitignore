@@ -1,0 +1,10 @@
+*.plan
+modules/*/.terraform.hcl
+*/.terraform.lock.hcl
+modules/*/.terraform.lock.hcl
+
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
