@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 
   assume_role {
     role_arn = "arn:aws:iam::772031827187:role/AbrigoCICDAdmin"
@@ -21,7 +21,7 @@ provider "aws" {
 #
 provider "aws" {
   alias  = "sandbox"
-  region = "us-east-1"
+  region = "us-east-2"
 
   assume_role {
     role_arn = "arn:aws:iam::673052121367:role/AbrigoCICDAdmin"
