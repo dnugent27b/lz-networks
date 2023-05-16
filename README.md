@@ -5,6 +5,7 @@ Create the sandbox network.
 * Create the VPC in the network account.
 * Create the ingress and egress AWS network firewall endpoints
 * Create the route tables
+* Create the subnets and share them out to the Sandbox account.  Make sure VPC and Subnet tags are added within Sandbox account.
 * Create the ingress and egress firewall policies - long term, pull out into own TF so that they can be leveraged by all VPCs
 * Create the nat gateway and EIP for egress
 * Create logging of VPC flow logs and firewall logs to centralized log archive account.  ASSUMES that the s3 network log bucket exists within the log archive account
