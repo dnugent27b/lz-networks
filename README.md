@@ -2,11 +2,19 @@
 
 Create the sandbox network.
 
-Create the VPC in the network account.
-Create the ingress and egress firewall endpoints
-Create the ingress and egress firewall policies
-Create the natgateway for egress
-Create logging of VPC flow logs and firewall logs to centralized log archive account
+* Create the VPC in the network account.
+* Create the ingress and egress AWS network firewall endpoints
+* Create the route tables
+* Create the ingress and egress firewall policies - long term, pull out into own TF so that they can be leveraged by all VPCs
+* Create the nat gateway and EIP for egress
+* Create logging of VPC flow logs and firewall logs to centralized log archive account.  ASSUMES that the s3 network log bucket exists within the log archive account
+
+TODO:
+
+* Fix:  CKV_AWS_346: "Ensure Network Firewall Policy defines an encryption configuration that uses a customer managed Key (CMK)
+* Fix:  CKV_AWS_345: "Ensure that Network firewall encryption is via a CMK
+* Fix:  CKV_AWS_344: "Ensure that Network firewalls have deletion protection enabled"
+* Fix:  CKV2_AWS_63: "Ensure Network firewall has logging configuration defined"
 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -105,6 +113,7 @@ No modules.
 | <a name="input_enable_firewalls"></a> [enable\_firewalls](#input\_enable\_firewalls) | true if create ingress and egress firewall endpoints | `bool` | `true` | no |
 | <a name="input_enable_flow_logs"></a> [enable\_flow\_logs](#input\_enable\_flow\_logs) | true if VPC flow logs should be created | `bool` | `true` | no |
 | <a name="input_enable_ngw"></a> [enable\_ngw](#input\_enable\_ngw) | true if create NAT gateway | `bool` | `true` | no |
+| <a name="input_enable_s3_endpoint"></a> [enable\_s3\_endpoint](#input\_enable\_s3\_endpoint) | true if S3 enpoint is setup to bypass NAT gateway | `bool` | `true` | no |
 | <a name="input_s3_logs_bucket_name"></a> [s3\_logs\_bucket\_name](#input\_s3\_logs\_bucket\_name) | S3 bucket name to store logs | `string` | `"abrigo1-logs-us-east-1"` | no |
 
 ## Outputs

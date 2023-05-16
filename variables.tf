@@ -16,6 +16,12 @@ variable "enable_flow_logs" {
   default     = true
 }
 
+variable "enable_s3_endpoint" {
+  description = "true if S3 enpoint is setup to bypass NAT gateway"
+  type        = bool
+  default     = true
+}
+
 variable "s3_logs_bucket_name" {
   description = "S3 bucket name to store logs"
   type        = string
